@@ -24,9 +24,15 @@ public class MathController {
     @GetMapping("/multiply/{num1}/and/{num2}")
     @ResponseBody
     public String multiply(@PathVariable int num1, @PathVariable int num2){
-        int subtraction = num1 * num2;
-        return  "sum of " + subtraction;
+        int multiplication = num1 * num2;
+        return  "sum of " + multiplication;
     }
 
+    @GetMapping("/divide/6/by/3")
+    @ResponseBody
+    public String divide(@PathVariable int num1, @PathVariable int num2){
+        int division = num1 / num2;
+        return  "sum of " + division;
+    }
 
 }
