@@ -7,17 +7,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class MathController {
-    @GetMapping("/add/{three}/and/{four}")
+    @GetMapping("/add/{num1}/and/{num2}")
     @ResponseBody
     public String addition(@PathVariable int num1, @PathVariable int num2){
         int addition = num1 + num2;
         return "sum of " + addition;
     }
 
-    @GetMapping("/subtract/3/from/10")
+    @GetMapping("/subtract/{num1}/from/{num2}")
     @ResponseBody
-    public String subtraction(@PathVariable int num1, int num2){
+    public String subtraction(@PathVariable int num1, @PathVariable int num2){
         int subtraction = num1 - num2;
         return  "sum of " + subtraction;
     }
+
+    @GetMapping("/multiply/{num1}/and/{num2}")
+    @ResponseBody
+    public String multiply(@PathVariable int num1, @PathVariable int num2){
+        int subtraction = num1 * num2;
+        return  "sum of " + subtraction;
+    }
+
+
 }
