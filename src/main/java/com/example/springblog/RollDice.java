@@ -16,8 +16,12 @@ public class RollDice {
 
     @GetMapping("roll-dice/{id}")
     public String diceRoll(@PathVariable int id, Model model){
-        int num = (int)(Math.random() *7);
+        int dice1 = (int)(Math.random() *7);
+        int dice2 = (int)(Math.random() * 7);
+        int num = dice1 + dice2;
         model.addAttribute("number", num);
+        model.addAttribute("dice1", dice1);
+        model.addAttribute("dice2", dice2);
         if(num != id){
             model.addAttribute("answer", "wrong");
         }else {
