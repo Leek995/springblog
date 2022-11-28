@@ -23,6 +23,8 @@ public class PostController {
         return "view the form for creating a post";
     }
 
+
+
 //    @GetMapping("/posts/create")
 //    @ResponseBody
 //    public String postCreateSubmit(){
